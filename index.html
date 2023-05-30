@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício</title>
+</head>
+
+<body>
+  <button onclick="aluguer();">Alugar</button>
+  <button onclick="devolvido();">Devolver</button>
+  <button onclick="tracking();">Tracking</button>
+  <script type="text/javascript">
+    function filme(titulo, ano, duracao, preco) {
+      return y = {
+        titulo: titulo,
+        ano: ano,
+        duracao: duracao,
+        preco: preco,
+        alugado: null,
+        ultimo: null,
+      };
+    }
+    filme("o rei leão", 1994, "1h29", "10€");
+
+    // ALUGA ‐> ALUGADO: "SIM"
+    function aluguer() {
+      y.alugado = "sim";
+      y.ultimo = "João Silva";
+    }
+
+    // DEVOLVE ‐> ALUGADO: "NÃO"
+    function devolvido() {
+      y.alugado = "não";
+    }
+    
+    // MOSTRA SE ESTÁ ALUGADO OU NÃO, E O ÚLTIMO CLIENTE
+    function tracking() {
+      console.log("Alugado: " + y.alugado);
+      console.log("Último Cliente: " + y.ultimo);
+    }
+
+  </script>
+</body>
+
+</html>
